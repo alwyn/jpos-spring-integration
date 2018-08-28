@@ -1,4 +1,4 @@
-package org.`as`.jpos.spring.integration.serializer
+package org.technomads.jpos.spring.integration.serializer
 
 import org.jpos.iso.ISOMsg
 import org.jpos.iso.packager.XML2003Packager
