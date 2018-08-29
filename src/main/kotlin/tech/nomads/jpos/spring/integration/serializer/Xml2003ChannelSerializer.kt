@@ -1,4 +1,4 @@
-package org.technomads.jpos.spring.integration.serializer
+package tech.nomads.jpos.spring.integration.serializer
 
 import org.jpos.iso.ISOMsg
 import org.jpos.iso.packager.XML2003Packager
@@ -28,14 +28,16 @@ object Xml2003ChannelSerializer : Serializer<ISOMsg>, Deserializer<ISOMsg> {
                 break
         }
         val msg = packager.createISOMsg()
-        msg.packager = packager
+        msg.packager =
+                packager
         msg.unpack(sb.toString().toByteArray())
         return msg
     }
 
     override fun serialize(msg: ISOMsg, outputStream: OutputStream) {
         msg.direction = ISOMsg.OUTGOING
-        msg.packager = this.packager
+        msg.packager =
+                packager
         val bytes = msg.pack()
         outputStream.write(bytes)
         outputStream.flush()

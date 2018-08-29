@@ -18,8 +18,8 @@ apply plugin: 'kotlin-spring'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 
-group = 'org.technomads'
-version = '0.0.1'
+group = 'tech.nomads'
+version = '0.0.2'
 sourceCompatibility = 1.8
 compileKotlin {
     kotlinOptions {
